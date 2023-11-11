@@ -203,7 +203,7 @@ document.addEventListener("DOMContentLoaded", function() {
             id: 9,
             nombre: "Elisium",
             imagen: "./images/pr9.png",
-            descripcion: "calidad premium"
+            descripcion: "calidad premium",
         },
         {
             id: 10,
@@ -238,4 +238,4 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
-});
+}); 
