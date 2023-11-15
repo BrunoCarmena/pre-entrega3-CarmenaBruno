@@ -148,84 +148,14 @@ function vaciarSessionStorage() {
 }
 
 
- //alertas btn carrito
-document.addEventListener("DOMContentLoaded", function() {
-    const productos = [
-        {
-            id: 1,
-            nombre: "Ades",
-            imagen: "./images/pr1.png",
-            descripcion: "Sabor Natural"
-        },
-        {
-            id: 2,
-            nombre: "Liozz Natura",
-            imagen: "./images/pr2.png",
-            descripcion: "Frutillas"
-        },
-        {
-            id: 3,
-            nombre: "Elisium",
-            imagen: "./images/pr3.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 4,
-            nombre: "Elisium",
-            imagen: "./images/pr4.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 5,
-            nombre: "Elisium",
-            imagen: "./images/pr5.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 6,
-            nombre: "Elisium",
-            imagen: "./images/pr6.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 7,
-            nombre: "Elisium",
-            imagen: "./images/pr7.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 8,
-            nombre: "Elisium",
-            imagen: "./images/pr8.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 9,
-            nombre: "Elisium",
-            imagen: "./images/pr9.png",
-            descripcion: "calidad premium",
-        },
-        {
-            id: 10,
-            nombre: "Elisium",
-            imagen: "./images/pr10.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 11,
-            nombre: "Elisium",
-            imagen: "./images/pr11.png",
-            descripcion: "calidad premium"
-        },
-        {
-            id: 12,
-            nombre: "Elisium",
-            imagen: "./images/pr12.png",
-            descripcion: "calidad premium"
-        },
-    ];
 
-    productos.forEach(producto => {
+
+//Promesas y Asincronias
+
+const getProducts = async () =>{
+    const response = await fetch ("data.json");
+    const data = await response.json();
+    data.forEach(producto => {
         const boton = document.getElementById(`compra${producto.id}`);
         boton.addEventListener("click", () => {
             Swal.fire({
@@ -238,4 +168,6 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         });
     });
-}); 
+};
+
+getProducts()
