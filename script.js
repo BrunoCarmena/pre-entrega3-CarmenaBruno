@@ -148,26 +148,40 @@ function vaciarSessionStorage() {
 }
 
 
+document.addEventListener('DOMContentLoaded', function () {
+    const productoContainer = document.getElementById('lista-1');
 
+    fetch('data.json')
+        .then(response => response.json())
+        .then(data => {
+            data.forEach(producto => {
+                const productoDiv = document.createElement('div');
+                productoDiv.className = 'box';
+                productoDiv.id = `compra${producto.id}`;
 
-//Promesas y Asincronias
+                productoDiv.innerHTML = `
+                    <img src="./images/pr${producto.id}.png" alt="">
+                    <div class="producto-txt">
+                        <h3>${producto.nombre}</h3>
+                        <p>${producto.descripcion}</p>
+                        <p class="precio">$${producto.precio}</p>
+                        <a href="#" class="agregar-carrito btn-3" data-id="${producto.id}">Agregar al carrito</a>
+                    </div>
+                `;
 
-const getProducts = async () =>{
-    const response = await fetch ("data.json");
-    const data = await response.json();
-    data.forEach(producto => {
-        const boton = document.getElementById(`compra${producto.id}`);
-        boton.addEventListener("click", () => {
-            Swal.fire({
-                title: 'Agregaste al carrito!',
-                text: `Compraste ${producto.nombre}. ${producto.descripcion}`,
-                imageUrl: producto.imagen,
-                imageWidth: 200,
-                imageHeight: 450,
-                imageAlt: 'Custom image',
+                productoContainer.appendChild(productoDiv);
+
+                const boton = document.querySelector(`#compra${producto.id} .agregar-carrito`);
+                boton.addEventListener("click", () => {
+                    Swal.fire({
+                        title: 'Agregaste al carrito!',
+                        text: `Compraste ${producto.nombre}. ${producto.descripcion}`,
+                        imageUrl: `./images/pr${producto.id}.png`,
+                        imageWidth: 200,
+                        imageHeight: 450,
+                        imageAlt: 'Custom image',
+                    });
+                });
             });
         });
-    });
-};
-
-getProducts()
+});

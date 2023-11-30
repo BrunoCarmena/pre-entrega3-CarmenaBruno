@@ -1,74 +1,86 @@
 [
     {
         "id": 1,
-        "nombre": "Ades",
+        "nombre": "Jugo Natural",
         "imagen": "./images/pr1.png",
-        "descripcion": "Sabor Natural"
+        "descripcion": "Sabor Natural",
+        "precio": 500
     },
     {
         "id": 2,
         "nombre": "Liozz Natura",
         "imagen": "./images/pr2.png",
-        "descripcion": "Frutillas"
+        "descripcion": "Frutillas",
+        "precio": 1000
     },
     {
         "id": 3,
         "nombre": "Elisium",
         "imagen": "./images/pr3.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 2000
     },
     {
         "id": 4,
         "nombre": "Elisium",
         "imagen": "./images/pr4.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 1600
     },
     {
         "id": 5,
         "nombre": "Elisium",
         "imagen": "./images/pr5.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 900
     },
     {
         "id": 6,
         "nombre": "Elisium",
         "imagen": "./images/pr6.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 750
     },
     {
         "id": 7,
         "nombre": "Elisium",
         "imagen": "./images/pr7.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 640
     },
     {
         "id": 8,
         "nombre": "Elisium",
         "imagen": "./images/pr8.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 2300
     },
     {
         "id": 9,
         "nombre": "Elisium",
         "imagen": "./images/pr9.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 1900
     },
     {
         "id": 10,
         "nombre": "Elisium",
         "imagen": "./images/pr10.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 980
     },
     {
         "id": 11,
         "nombre": "Elisium",
         "imagen": "./images/pr11.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 1750
     },
     {
         "id": 12,
         "nombre": "Elisium",
         "imagen": "./images/pr12.png",
-        "descripcion": "calidad premium"
+        "descripcion": "calidad premium",
+        "precio": 1200
     }
 ]
